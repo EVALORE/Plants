@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Inika:regular,700');
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+:root {
+  --color-1: #499a18;
+  --color-2: #e06733;
+  --color-3: #717171;
+  --color-4: #636060;
+  --color-5: #edf2ec;
+  --color-6: #010201;
+  --fz-1: 16px;
+  --fz-2: 20px;
+  --fz-3: 40px;
+}
+
+html,
+body {
+  font-family: 'Inter';
+  font-size: var(--fz-2);
+  color: var(--color-4);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1222px;
+  padding-inline: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .container {
+    padding-inline: 25px;
+  }
+}
+
+/* common */
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: fill;
+}
+
+.title {
+  font-family: 'Inika';
+  font-size: clamp(35px, 4vw, var(--fz-3));
+  line-height: 52px;
+  color: var(--color-1);
+}
+
+.title span {
+  color: var(--color-2);
+}
+
+button {
+  border: 2px solid var(--color-2);
+  border-radius: 5px;
+  width: 161px;
+  height: 50px;
+  font-family: 'Inika';
+  font-size: var(--fz-2);
+  line-height: 26px;
+  color: var(--color-2);
+  background: none;
+}
+
+@media screen and (max-width: 380px) {
+  .title {
+    font-size: 25px;
+    line-height: 1.32;
+  }
+
+  button {
+    width: 121px;
+    height: 35px;
+    font-size: 15px;
+    line-height: 20px;
+  }
+}

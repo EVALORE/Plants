@@ -1,0 +1,157 @@
+:root {
+  --color-1: #499a18;
+  --color-2: #e06733;
+  --color-3: #717171;
+  --color-4: #636060;
+  --color-5: #edf2ec;
+  --color-6: #010201;
+  --fz-1: 16px;
+  --fz-2: 20px;
+  --fz-3: 40px;
+}
+
+/* service */
+
+.service {
+  padding-top: 39px;
+  padding-bottom: 121px;
+  background-color: var(--color-5);
+}
+
+.service__content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 79px;
+}
+
+.service__title {
+  margin-right: 142px;
+  max-width: 306px;
+}
+
+.serivce__btns {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5px;
+  gap: 38px;
+}
+
+.service__services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 55px 113px;
+}
+
+.service__item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e3e1d5;
+  border-radius: 20px;
+  max-width: 330px;
+  text-align: center;
+}
+
+.blur {
+  filter: blur(2px);
+}
+
+.service__item div {
+  font-weight: 700;
+  line-height: 20px;
+  color: var(--color-2);
+}
+
+.service__item div:first-of-type {
+  margin-bottom: 8px;
+  width: fit-content;
+  height: 100%;
+}
+
+.service__item div:last-of-type {
+  margin-bottom: 15px;
+}
+
+.service__item p {
+  margin-bottom: 36px;
+  font-size: var(--fz-1);
+  line-height: 1.25;
+}
+
+.service__item img {
+  width: 329px;
+  height: 350px;
+}
+
+@media screen and (max-width: 768px) {
+  .service__content {
+    margin-bottom: 40px;
+  }
+
+  .service__services {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+    gap: 38px 107px;
+  }
+
+  .service__item {
+    margin-inline: auto;
+  }
+
+  .service__item div:first-of-type {
+    margin-bottom: 10px;
+  }
+
+  .service__item div:last-of-type {
+    margin-bottom: 10px;
+  }
+
+  .service__item,
+  .service__item img {
+    width: 280px;
+  }
+
+  .service__item p {
+    margin: 0 auto 20px;
+    max-width: 201px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .service {
+    padding-top: 32px;
+    padding-bottom: 27px;
+  }
+
+  .service__content {
+    margin-bottom: 40px;
+  }
+
+  .service__title {
+    margin-right: 142px;
+    margin-bottom: 34px;
+  }
+
+  .serivce__btns {
+    gap: 9px 10px;
+  }
+
+  .service__services {
+    gap: 32px;
+  }
+
+  .service__item {
+    border-radius: 20px;
+    width: 280px;
+    text-align: center;
+  }
+
+  .service__item div {
+    font-weight: 700;
+    line-height: 20px;
+    color: var(--color-2);
+  }
+
+  .service__item p {
+    font-size: var(--fz-1);
+  }
+}
