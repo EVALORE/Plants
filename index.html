@@ -5,66 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/style.css" />
-
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/welcome.css" />
-    <link rel="stylesheet" href="css/about.css" />
-    <link rel="stylesheet" href="css/service.css" />
-    <link rel="stylesheet" href="css/prices.css" />
-    <link rel="stylesheet" href="css/contact.css" />
-    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
         <div class="container">
-          <div class="header__logo">
-            <img src="img/logo.svg" alt="logo" />
-          </div>
+          <a href="index.html"
+            ><img src="assets/image/logo.svg" alt="logo" class="logo"
+          /></a>
           <nav class="nav">
             <ul class="nav__list">
-              <li class="nav__item"><a href="#">Home</a></li>
-              <li class="nav__item"><a href="#">About us</a></li>
-              <li class="nav__item"><a href="#">Service</a></li>
-              <li class="nav__item"><a href="#">Price</a></li>
-              <li class="nav__item"><a href="#">Contacts</a></li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Home</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">About us</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Service</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Price</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Contacts</a>
+              </li>
             </ul>
           </nav>
         </div>
       </header>
       <main class="main">
-
         <section class="welcome">
-          
           <div class="container">
-            <div class="welcome__img">
-              <img src="img/welcome/welcome__leafs.png" alt="welcome image" />
-            </div>
-
+            <img
+              src="assets/image/welcome/welcome__leafs.png"
+              alt="leaves"
+              class="welcome__img"
+            />
             <div class="welcome__content">
               <h1 class="welcome__title">
                 We grow <span>plants</span> and give you oxygen
               </h1>
-              <p class="text welcome__text">
+              <p class="welcome__text">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s.
               </p>
-              <button class="welcome__button">LEARN MORE</button>
+              <button class="welcome__button">Learn More</button>
             </div>
           </div>
-
         </section>
-
         <section class="about">
           <div class="container">
             <div class="about__content">
-              <h2 class="title about__title">
+              <h2 class="about__title title">
                 We are <span>professional experienced</span> gardeners
               </h2>
-              <p class="text about__text">
+              <p class="about__text">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
@@ -73,80 +71,134 @@
                 electronic typesetting, remaining essentially unchanged.
               </p>
             </div>
-            <div class="about__img">
-              <img src="img/about/about__houseplant.png" alt="about" />
-            </div>
+            <img
+              class="about__img"
+              src="assets/image/about/about__houseplant.png"
+              alt="plant"
+            />
           </div>
         </section>
         <section class="service">
           <div class="container">
-            <div class="service__content">
+            <div class="service__top">
               <h2 class="service__title title">Service and our projects</h2>
-              <div class="serivce__btns">
-                <button data-filter="Garden">Gardens</button>
-                <button data-filter="Lawn">Lawn</button>
-                <button data-filter="Plant">Planting</button>
+              <div class="service__buttons">
+                <button class="button">Gardens</button>
+                <button class="button">Lawn</button>
+                <button class="button">Planting</button>
               </div>
             </div>
-            <div class="service__services">
-              <div class="service__item" data-content="Garden">
-                <div><img src="img/services/first-1.png" alt="service" /></div>
-                <div>Garden care</div>
-                <p>Lorem Ipsum has been the industry</p>
+            <div class="service__cards">
+              <div class="card">
+                <picture class="card__img">
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="assets/image/service/first-1.png"
+                    type="image/png"
+                  />
+                  <img src="assets/image/service/first-1.png" alt="first" />
+                </picture>
+                <div class="card__content">
+                  <div class="card__title">Garden care</div>
+                  <div class="card__text">
+                    Lorem Ipsum has been the industry
+                  </div>
+                </div>
               </div>
-              <div class="service__item" data-content="Plant">
-                <div><img src="img/services/first-1.png" alt="service" /></div>
-                <div>Planting</div>
-                <p>Lorem Ipsum has been the industry</p>
+              <div class="card">
+                <picture class="card__img">
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="assets/image/service/first-2.png"
+                    type="image/png"
+                  />
+                  <img src="assets/image/service/first-2.png" alt="second" />
+                </picture>
+                <div class="card__content">
+                  <div class="card__title">Planting</div>
+                  <div class="card__text">
+                    Lorem Ipsum has been the industry
+                  </div>
+                </div>
               </div>
-              <div class="service__item" data-content="Lawn">
-                <div><img src="img/services/first-1.png" alt="service" /></div>
-                <div>Lawn care</div>
-                <p>Lorem Ipsum has been the industry</p>
+              <div class="card">
+                <picture class="card__img">
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="assets/image/service/first-3.png"
+                    type="image/png"
+                  />
+                  <img src="assets/image/service/first-3.png" alt="third" />
+                </picture>
+                <div class="card__content">
+                  <div class="card__title">Lawn care</div>
+                  <div class="card__text">
+                    Lorem Ipsum has been the industry
+                  </div>
+                </div>
               </div>
-              <div class="service__item" data-content="Plant">
-                <div><img src="img/services/first-1.png" alt="service" /></div>
-                <div>Planting</div>
-                <p>Lorem Ipsum has been the industry</p>
+              <div class="card">
+                <picture class="card__img">
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="assets/image/service/first-4.png"
+                    type="image/png"
+                  />
+                  <img src="assets/image/service/first-4.png" alt="forth" />
+                </picture>
+                <div class="card__content">
+                  <div class="card__title">Planting</div>
+                  <div class="card__text">
+                    Lorem Ipsum has been the industry
+                  </div>
+                </div>
               </div>
-              <div class="service__item" data-content="Garden">
-                <div><img src="img/services/first-1.png" alt="service" /></div>
-                <div>Garden care</div>
-                <p>Lorem Ipsum has been the industry</p>
+              <div class="card">
+                <picture class="card__img">
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="assets/image/service/first-5.png"
+                    type="image/png"
+                  />
+                  <img src="assets/image/service/first-5.png" alt="fifth" />
+                </picture>
+                <div class="card__content">
+                  <div class="card__title">Garden care</div>
+                  <div class="card__text">
+                    Lorem Ipsum has been the industry
+                  </div>
+                </div>
               </div>
-              <div class="service__item" data-content="Plant">
-                <div><img src="img/services/first-1.png" alt="service" /></div>
-                <div>Planting</div>
-                <p>Lorem Ipsum has been the industry</p>
+              <div class="card">
+                <picture class="card__img">
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="assets/image/service/first-6.png"
+                    type="image/png"
+                  />
+                  <img src="assets/image/service/first-6.png" alt="sixth" />
+                </picture>
+                <div class="card__content">
+                  <div class="card__title">Planting</div>
+                  <div class="card__text">
+                    Lorem Ipsum has been the industry
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
         <section class="prices">
           <div class="container">
-            <div class="prices__col">
+            <div class="prices__column">
               <h2 class="prices__title title">Prices</h2>
               <div class="accordeon">
                 <div class="accordeon__option">
                   <div class="accordeon__top">
                     <p class="accordeon__title">Basics</p>
                     <div class="accordeon__button">
-                      <svg
-                        width="6"
-                        height="4"
-                        viewBox="0 0 6 4"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M3.00003 3.0129L1.00003 1.01302"
-                          stroke="#717171"
-                          stroke-width="0.5"
-                          stroke-linecap="round" />
-                        <path
-                          d="M3 3.0127L5 1.0127"
-                          stroke="#717171"
-                          stroke-width="0.5"
-                          stroke-linecap="round" />
+                      <svg width="6" height="4">
+                        <use xlink:href="./assets/image/sprite.svg#arrow"></use>
                       </svg>
                     </div>
                   </div>
@@ -156,28 +208,14 @@
                     and more recently
                   </p>
                   <p class="accordeon__price"><span>$15</span> / per hour</p>
-                  <div class="acordeon__more">Order</div>
+                  <div class="accordeon__more">Order</div>
                 </div>
                 <div class="accordeon__option">
                   <div class="accordeon__top">
-                    <p class="accordeon__title">Basics</p>
+                    <p class="accordeon__title">Standard</p>
                     <div class="accordeon__button">
-                      <svg
-                        width="6"
-                        height="4"
-                        viewBox="0 0 6 4"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M3.00003 3.0129L1.00003 1.01302"
-                          stroke="#717171"
-                          stroke-width="0.5"
-                          stroke-linecap="round" />
-                        <path
-                          d="M3 3.0127L5 1.0127"
-                          stroke="#717171"
-                          stroke-width="0.5"
-                          stroke-linecap="round" />
+                      <svg width="6" height="4">
+                        <use xlink:href="./assets/image/sprite.svg#arrow"></use>
                       </svg>
                     </div>
                   </div>
@@ -186,29 +224,15 @@
                     Release of Letraset sheets containing Lorem Ipsum passages,
                     and more recently
                   </p>
-                  <p class="accordeon__price"><span>$15</span> / per hour</p>
-                  <div class="acordeon__more">Order</div>
+                  <p class="accordeon__price"><span>$25</span> / per hour</p>
+                  <div class="accordeon__more">Order</div>
                 </div>
                 <div class="accordeon__option">
                   <div class="accordeon__top">
-                    <p class="accordeon__title">Basics</p>
+                    <p class="accordeon__title">Pro care</p>
                     <div class="accordeon__button">
-                      <svg
-                        width="6"
-                        height="4"
-                        viewBox="0 0 6 4"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M3.00003 3.0129L1.00003 1.01302"
-                          stroke="#717171"
-                          stroke-width="0.5"
-                          stroke-linecap="round" />
-                        <path
-                          d="M3 3.0127L5 1.0127"
-                          stroke="#717171"
-                          stroke-width="0.5"
-                          stroke-linecap="round" />
+                      <svg width="6" height="4">
+                        <use xlink:href="./assets/image/sprite.svg#arrow"></use>
                       </svg>
                     </div>
                   </div>
@@ -217,88 +241,79 @@
                     Release of Letraset sheets containing Lorem Ipsum passages,
                     and more recently
                   </p>
-                  <p class="accordeon__price"><span>$15</span> / per hour</p>
-                  <div class="acordeon__more">Order</div>
+                  <p class="accordeon__price"><span>$35</span> / per hour</p>
+                  <div class="accordeon__more">Order</div>
                 </div>
               </div>
             </div>
-            <div class="prices__col">
-              <p class="prices__text">
+            <div class="prices__column">
+              <p class="prices__text title">
                 Our best <span>gardeners</span> are ready to help you
               </p>
-              <button class="prices__call-us">Contact us</button>
-              <div class="prices__image">
-                <img src="img/prices/prices__leaves.png" alt="leaves" />
-              </div>
+              <button class="prices__button">Contact us</button>
+              <img
+                src="assets/image/prices/prices__leafs.png"
+                alt="leaves"
+                class="prices__img"
+              />
             </div>
           </div>
         </section>
-        <section class="contact-us">
+        <section class="contacts">
           <div class="container">
-            <div class="contact-us__img">
-              <img
-                src="img/contacts/contacts__woman.png"
-                alt="woman with flowers and shovel" />
-            </div>
-            <div class="contact-us__inner">
-              <h2 class="title contact-us__title">Contact us</h2>
-            </div>
-            <div>
-              <div class="dropdown">
-                <div class="dropdown__selected">
+            <img
+              src="assets/image/contacts/contacts__woman.png"
+              alt="woman"
+              class="contacts__img"
+            />
+            <div class="contacts__content">
+              <h2 class="contacts__title title">Contact us</h2>
+              <div class="contacts__select">
+                <div class="dropdown">
                   <div class="dropdown__title">City</div>
-                  <button class="dropdown__button">
-                    <svg
-                      width="6"
-                      height="4"
-                      viewBox="0 0 6 4"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M3.00003 2.99997L1.00002 1.00008"
-                        stroke="white"
-                        stroke-width="0.5"
-                        stroke-linecap="round" />
-                      <path
-                        d="M3 3L5 1"
-                        stroke="white"
-                        stroke-width="0.5"
-                        stroke-linecap="round" />
+                  <div class="dropdown__button">
+                    <svg width="6" height="4">
+                      <use xlink:href="./assets/image/sprite.svg#arrow"></use>
                     </svg>
-                  </button>
+                  </div>
+                  <div class="dropdown__list"></div>
                 </div>
-                <div class="dropdown__list"></div>
+                <div class="city"></div>
               </div>
-              <div class="city"></div>
             </div>
           </div>
         </section>
       </main>
       <footer class="footer">
         <div class="container">
-
           <div class="footer__data">
-            <span>©</span>
-            <span>2022</span>
-            <span>github</span>
+            <span>©</span><span>2022</span><span>github</span>
           </div>
-
-          <div class="footer__text"><a href="">Rolling Scopes School</a></div>
-
-          <div class="social__list">
-            <a href="#"><img src="./img/socials/inst.svg" alt="instagram" /></a>
-            <a href="#"><img src="./img/socials/fb.svg" alt="facebook" /></a>
-            <a href="#"><img src="./img/socials/tw.svg" alt="twitter" /></a>
-            <a href="#"><img src="./img/socials/pinterest.svg" alt="pinterest"/></a>
-          </div>
-
+          <div class="footer__school">Rolling Scopes School</div>
+          <ul class="social__list">
+            <li class="social__link">
+              <a href="#"
+                ><img src="assets/image/socials/inst.svg" alt="instagram"
+              /></a>
+            </li>
+            <li class="social__link">
+              <a href="#"
+                ><img src="assets/image/socials/fb.svg" alt="facebook"
+              /></a>
+            </li>
+            <li class="social__link">
+              <a href="#"
+                ><img src="assets/image/socials/tw.svg" alt="twitter"
+              /></a>
+            </li>
+            <li class="social__link">
+              <a href="#"
+                ><img src="assets/image/socials/pinterest.svg" alt="pinterest"
+              /></a>
+            </li>
+          </ul>
         </div>
       </footer>
     </div>
-
-    <script src="./js/filter.js"></script>
-    <script src="js/accordeon.js"></script>
-    <script src="js/dropDown.js"></script>
-    <script src="js/index.js"></script>
   </body>
 </html>
