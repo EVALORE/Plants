@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet"> -->
+
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
@@ -38,11 +42,9 @@
       <main class="main">
         <section class="welcome">
           <div class="container">
-            <img
-              src="assets/image/welcome/welcome__leafs.png"
-              alt="leaves"
-              class="welcome__img"
-            />
+            <picture class="welcome__img">
+              <img src="assets/image/welcome/welcome__leafs.png" alt="leaves" />
+            </picture>
             <div class="welcome__content">
               <h1 class="welcome__title">
                 We grow <span>plants</span> and give you oxygen
@@ -71,11 +73,9 @@
                 electronic typesetting, remaining essentially unchanged.
               </p>
             </div>
-            <img
-              class="about__img"
-              src="assets/image/about/about__houseplant.png"
-              alt="plant"
-            />
+            <picture class="about__img">
+              <img src="assets/image/about/about__houseplant.png" alt="plant" />
+            </picture>
           </div>
         </section>
         <section class="service">
@@ -261,20 +261,23 @@
         </section>
         <section class="contacts">
           <div class="container">
-            <img
-              src="assets/image/contacts/contacts__woman.png"
-              alt="woman"
-              class="contacts__img"
-            />
+            <picture class="contacts__img">
+              <img
+                src="assets/image/contacts/contacts__woman.png"
+                alt="woman"
+              />
+            </picture>
             <div class="contacts__content">
               <h2 class="contacts__title title">Contact us</h2>
               <div class="contacts__select">
                 <div class="dropdown">
-                  <div class="dropdown__title">City</div>
-                  <div class="dropdown__button">
-                    <svg width="6" height="4">
-                      <use xlink:href="./assets/image/sprite.svg#arrow"></use>
-                    </svg>
+                  <div class="dropdown__select">
+                    <div class="dropdown__title">City</div>
+                    <div class="dropdown__button">
+                      <svg width="6" height="4">
+                        <use xlink:href="./assets/image/sprite.svg#arrow"></use>
+                      </svg>
+                    </div>
                   </div>
                   <div class="dropdown__list"></div>
                 </div>
@@ -315,5 +318,7 @@
         </div>
       </footer>
     </div>
+
+    <script src="js/index.js"></script>
   </body>
 </html>
