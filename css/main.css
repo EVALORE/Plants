@@ -452,12 +452,21 @@ button:focus {
   outline: 1px solid #e06733;
 }
 
+@media screen and (max-width: 479.98px) {
+  button {
+    width: 130px;
+    font-size: 17px;
+    padding-block: 11px;
+    border-radius: 5px;
+  }
+}
 @media screen and (max-width: 380px) {
   button {
     width: 120px;
     font-size: 15px;
     line-height: 1.33;
     padding-block: 7px;
+    border-radius: 5px;
   }
 }
 .card {
@@ -520,7 +529,7 @@ button:focus {
   border-radius: 20px;
   padding: 16px 40px 0 40px;
   max-width: 250px;
-  min-width: 180px;
+  min-width: 195px;
   height: 50px;
   background: #edf2ec;
 }
@@ -666,7 +675,7 @@ button:focus {
 .header .container {
   max-width: 1320px;
   height: 134px;
-  gap: 10px;
+  gap: 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -699,6 +708,20 @@ button:focus {
   font-weight: 700;
 }
 
+.menu {
+  display: none;
+}
+.menu span {
+  display: block;
+  width: 40px;
+  background-color: #717171;
+  border: 2px solid #717171;
+  transition: all 0.5s ease-in-out;
+}
+.menu span:not(:last-child) {
+  margin-bottom: 5px;
+}
+
 @media screen and (max-width: 768px) {
   .header .container {
     height: 120px;
@@ -709,12 +732,62 @@ button:focus {
     max-height: 23px;
   }
 }
+@media screen and (max-width: 600px) {
+  .menu {
+    display: block;
+  }
+  .menu.close span {
+    opacity: 0;
+  }
+  .menu.close span:nth-child(3), .menu.close span:nth-child(2) {
+    opacity: 1;
+  }
+  .menu.close span:nth-child(3) {
+    rotate: 45deg;
+    translate: 0 -3px;
+  }
+  .menu.close span:nth-child(2) {
+    rotate: -45deg;
+    translate: 0 5px;
+  }
+  .nav {
+    position: absolute;
+    overflow: hidden;
+    top: 90px;
+    width: 175px;
+    padding-right: 25px;
+    right: 0;
+  }
+  .nav__list {
+    display: block;
+    z-index: 100;
+    transform: translateX(200px);
+    transition: all 1s ease-in-out;
+    text-align: right;
+  }
+  .nav__link {
+    display: block;
+    width: 0;
+    opacity: 0;
+    height: 50px;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+  }
+  .nav.open .nav__list {
+    transform: translateX(0);
+    display: block;
+    background-color: #dce9d9;
+    border-radius: 10px;
+    padding: 15px 27px 15px 0;
+  }
+  .nav.open .nav__link {
+    width: 100%;
+    opacity: 1;
+  }
+}
 @media screen and (max-width: 380px) {
   .header .container {
     height: 96px;
-  }
-  .nav__link {
-    visibility: hidden;
   }
 }
 .footer .container {
@@ -836,6 +909,11 @@ button:focus {
     margin-top: 0px;
   }
 }
+@media screen and (max-width: 479.98px) {
+  .welcome__img {
+    display: none;
+  }
+}
 @media screen and (max-width: 380px) {
   .welcome {
     padding-top: 96px;
@@ -858,6 +936,7 @@ button:focus {
     padding-block: 9.5px;
     border-width: 2px;
     font-size: 10px;
+    border-radius: 10px;
   }
 }
 .about {
@@ -972,6 +1051,11 @@ button:focus {
   }
   .service__cards {
     gap: 38px 108px;
+  }
+}
+@media screen and (max-width: 479.98px) {
+  .service__buttons {
+    gap: 20px;
   }
 }
 @media screen and (max-width: 380px) {
