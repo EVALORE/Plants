@@ -333,7 +333,7 @@ template {
   font-size: 20px;
 }
 
-.font-16, .welcome__button, .nav__link, .accordeon__price span, .card__text {
+.font-16, .welcome__button, .nav__link, .nav-mobile__link, .accordeon__price span, .card__text {
   font-size: 0.8rem;
   line-height: 1.25;
 }
@@ -369,7 +369,7 @@ textarea {
   resize: none;
 }
 
-img {
+picture img {
   width: 100%;
   display: block;
 }
@@ -508,8 +508,29 @@ button:focus {
   .card__title {
     margin-bottom: 10px;
   }
+  .card:nth-child(2) .card__title {
+    margin-bottom: 12px;
+  }
+  .card:nth-child(3) .card__title {
+    margin-bottom: 8px;
+  }
+  .card:nth-child(4) .card__title {
+    margin-bottom: 11px;
+  }
+  .card:nth-child(6) .card__title {
+    margin-bottom: 12px;
+  }
   .card__text {
     margin-bottom: 18px;
+  }
+  .card:nth-child(2) .card__text {
+    margin-bottom: 16px;
+  }
+  .card:nth-child(3) .card__text {
+    margin-bottom: 20px;
+  }
+  .card:nth-child(6) .card__text {
+    margin-bottom: 17px;
   }
 }
 @media screen and (max-width: 380px) {
@@ -611,7 +632,11 @@ button:focus {
   }
   .accordeon__option {
     max-width: 180px;
+    min-width: 100px;
     padding: 16px 40px 0 30px;
+  }
+  .accordeon__option:not(:last-child) {
+    margin-bottom: 13px;
   }
   .accordeon__title {
     font-size: 15px;
@@ -667,6 +692,11 @@ button:focus {
     width: calc(56.25vw + 18px);
   }
 }
+@media screen and (max-width: 380px) {
+  .dropdown {
+    padding-inline: 18px 22px;
+  }
+}
 .header {
   position: absolute;
   left: 0;
@@ -688,14 +718,11 @@ button:focus {
 }
 
 .nav {
-  display: flex;
-  align-self: center;
   width: 452px;
 }
 .nav__list {
   display: flex;
   justify-content: space-between;
-  flex: 0 1 452px;
 }
 .nav__link {
   font-family: "Inika";
@@ -714,12 +741,44 @@ button:focus {
 .menu span {
   display: block;
   width: 40px;
+  height: 2px;
   background-color: #717171;
-  border: 2px solid #717171;
+  border: 1px solid #717171;
   transition: all 0.5s ease-in-out;
 }
 .menu span:not(:last-child) {
-  margin-bottom: 5px;
+  margin-bottom: 6px;
+}
+
+.nav-mobile {
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+  display: none;
+  position: absolute;
+  top: 0;
+  text-align: right;
+  transition: all 0.5s ease-in-out;
+  white-space: nowrap;
+  right: 0;
+}
+.nav-mobile__list {
+  background-color: rgba(214, 231, 210, 0.9);
+  padding: 100px 50px 10px 0;
+}
+.nav-mobile__link {
+  font-family: "Inika";
+  line-height: 3.12;
+  color: #010201;
+  transition: all 0.3s ease-in-out;
+}
+.nav-mobile__link:hover {
+  color: #e06733;
+  font-weight: 700;
+}
+.nav-mobile.open {
+  width: 200px;
+  opacity: 1;
 }
 
 @media screen and (max-width: 768px) {
@@ -735,6 +794,8 @@ button:focus {
 @media screen and (max-width: 600px) {
   .menu {
     display: block;
+    position: relative;
+    z-index: 100;
   }
   .menu.close span {
     opacity: 0;
@@ -751,43 +812,23 @@ button:focus {
     translate: 0 5px;
   }
   .nav {
-    position: absolute;
-    overflow: hidden;
-    top: 90px;
-    width: 175px;
-    padding-right: 25px;
-    right: 0;
+    display: none;
   }
-  .nav__list {
+  .nav-mobile {
     display: block;
-    z-index: 100;
-    transform: translateX(200px);
-    transition: all 1s ease-in-out;
-    text-align: right;
-  }
-  .nav__link {
-    display: block;
-    width: 0;
-    opacity: 0;
-    height: 50px;
-    overflow: hidden;
-    transition: all 0.5s ease-in-out;
-  }
-  .nav.open .nav__list {
-    transform: translateX(0);
-    display: block;
-    background-color: #dce9d9;
-    border-radius: 10px;
-    padding: 15px 27px 15px 0;
-  }
-  .nav.open .nav__link {
-    width: 100%;
-    opacity: 1;
   }
 }
 @media screen and (max-width: 380px) {
   .header .container {
-    height: 96px;
+    height: 94px;
+  }
+  .logo {
+    margin-top: 8px;
+    width: 81px;
+    height: 23px;
+  }
+  .nav-mobile__list {
+    padding-right: 25px;
   }
 }
 .footer .container {
@@ -796,9 +837,15 @@ button:focus {
   align-items: center;
   justify-content: space-between;
 }
-.footer__data {
+.footer__data a {
   display: flex;
   gap: 20px;
+}
+.footer a {
+  transition: all 0.3s ease-in-out;
+}
+.footer a:hover {
+  color: #e06733;
 }
 .footer__school {
   margin-left: 20px;
@@ -815,6 +862,10 @@ button:focus {
 .social__link {
   max-width: 32px;
   max-height: 32px;
+  transition: all 0.3s ease-in-out;
+}
+.social__link:hover {
+  rotate: 10deg;
 }
 
 @media screen and (max-width: 768px) {
@@ -833,6 +884,15 @@ button:focus {
     display: flex;
     margin-top: 5px;
     gap: 20px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .footer .container {
+    padding-block: 21px;
+    gap: 8px;
+  }
+  .footer__school {
+    padding-top: 7px;
   }
 }
 .welcome {
@@ -916,7 +976,7 @@ button:focus {
 }
 @media screen and (max-width: 380px) {
   .welcome {
-    padding-top: 96px;
+    padding-top: 97px;
     padding-bottom: 24px;
   }
   .welcome .container {
@@ -927,7 +987,14 @@ button:focus {
   }
   .welcome__title {
     font-size: 25px;
-    line-height: 1.32;
+    line-height: 1.38;
+    margin-bottom: 21px;
+  }
+  .welcome__text {
+    margin-left: 0;
+    font-size: 16px;
+    line-height: 1.56;
+    margin-bottom: 25px;
   }
   .welcome__button {
     width: 100px;
@@ -994,10 +1061,10 @@ button:focus {
 @media screen and (max-width: 380px) {
   .about {
     padding-top: 30px;
-    padding-bottom: 31px;
+    padding-bottom: 35px;
   }
   .about__content {
-    margin-bottom: 13px;
+    margin-bottom: 0;
   }
   .about__title {
     margin-bottom: 13px;
@@ -1064,14 +1131,14 @@ button:focus {
     padding-bottom: 27px;
   }
   .service__top {
-    row-gap: 35px;
+    row-gap: 38px;
     margin-bottom: 40px;
   }
   .service__title {
     max-width: 200px;
   }
   .service__buttons {
-    gap: 9px 10px;
+    gap: 8px 10px;
   }
   .service__cards {
     gap: 34px 108px;
@@ -1131,6 +1198,7 @@ button:focus {
   }
   .prices__column:last-child {
     margin-top: 99px;
+    padding-left: 13px;
   }
   .prices__title {
     margin-left: 14px;
@@ -1143,6 +1211,24 @@ button:focus {
   }
   .prices__button {
     margin-bottom: 34px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .prices .container {
+    flex-direction: column;
+  }
+  .prices .container {
+    justify-content: center;
+  }
+  .prices__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .prices__column:last-child {
+    align-items: center;
+    text-align: center;
   }
 }
 @media screen and (max-width: 380px) {
@@ -1161,8 +1247,19 @@ button:focus {
   }
   .prices__column:last-child {
     margin-top: 19px;
+    padding-left: 0px;
     align-items: center;
     text-align: center;
+  }
+  .prices__title {
+    margin-left: 0;
+    margin-bottom: 36px;
+  }
+  .prices__text {
+    font-size: 20px;
+    line-height: 1.75;
+    max-width: 230px;
+    margin-bottom: 20px;
   }
   .prices__button {
     width: 121px;
@@ -1234,6 +1331,9 @@ button:focus {
   }
 }
 @media screen and (max-width: 380px) {
+  .contacts {
+    padding-top: 25px;
+  }
   .contacts__title {
     font-size: 25px;
     line-height: 1.32;
@@ -1243,5 +1343,11 @@ button:focus {
   }
   .contacts__content {
     margin-bottom: 132px;
+  }
+  .contacts__img {
+    flex: 0 0 33%;
+    margin-left: 0;
+    max-width: 100px;
+    max-height: 124px;
   }
 }

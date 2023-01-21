@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>plants</title>
     <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/image/favicon.ico"
+      type="image/x-icon"
+    />
   </head>
   <body>
     <div class="wrapper">
@@ -17,30 +22,48 @@
           <nav class="nav">
             <ul class="nav__list">
               <li class="nav__item">
-                <a href="#" class="nav__link">Home</a>
+                <a href="#home" class="nav__link">Home</a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link">About us</a>
+                <a href="#about-us" class="nav__link">About us</a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link">Service</a>
+                <a href="#service" class="nav__link">Service</a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link">Price</a>
+                <a href="#price" class="nav__link">Price</a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link">Contacts</a>
+                <a href="#contacts" class="nav__link">Contacts</a>
               </li>
             </ul>
           </nav>
           <div class="menu">
-            <span class="menu"></span><span class="menu"></span
-            ><span class="menu"></span><span class="menu"></span>
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <div class="nav-mobile">
+            <ul class="nav-mobile__list">
+              <li class="nav-mobile__item">
+                <a href="#home" class="nav-mobile__link">Home</a>
+              </li>
+              <li class="nav-mobile__item">
+                <a href="#about-us" class="nav-mobile__link">About us</a>
+              </li>
+              <li class="nav-mobile__item">
+                <a href="#service" class="nav-mobile__link">Service</a>
+              </li>
+              <li class="nav-mobile__item">
+                <a href="#price" class="nav-mobile__link">Price</a>
+              </li>
+              <li class="nav-mobile__item">
+                <a href="#contacts" class="nav-mobile__link">Contacts</a>
+              </li>
+            </ul>
           </div>
         </div>
       </header>
       <main class="main">
-        <section class="welcome">
+        <section class="welcome" id="home">
           <div class="container">
             <picture class="welcome__img">
               <img src="assets/image/welcome/welcome__leafs.png" alt="leaves" />
@@ -58,7 +81,7 @@
             </div>
           </div>
         </section>
-        <section class="about">
+        <section class="about" id="about-us">
           <div class="container">
             <div class="about__content">
               <h2 class="about__title title">
@@ -78,7 +101,7 @@
             </picture>
           </div>
         </section>
-        <section class="service">
+        <section class="service" id="service">
           <div class="container">
             <div class="service__top">
               <h2 class="service__title title">Service and our projects</h2>
@@ -188,7 +211,7 @@
             </div>
           </div>
         </section>
-        <section class="prices">
+        <section class="prices" id="price">
           <div class="container">
             <div class="prices__column">
               <h2 class="prices__title title">Prices</h2>
@@ -259,7 +282,7 @@
             </div>
           </div>
         </section>
-        <section class="contacts">
+        <section class="contacts" id="contacts">
           <div class="container">
             <picture class="contacts__img">
               <img
@@ -290,27 +313,53 @@
       <footer class="footer">
         <div class="container">
           <div class="footer__data">
-            <span>©</span><span>2022</span><span>github</span>
+            <a
+              href="https://github.com/EVALORE"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>©</span><span>2022</span><span>github</span></a
+            >
           </div>
-          <div class="footer__school">Rolling Scopes School</div>
+          <div class="footer__school">
+            <a
+              href="https://rs.school/js-stage0/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Rolling Scopes School</a
+            >
+          </div>
           <ul class="social__list">
             <li class="social__link">
-              <a href="#"
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
                 ><img src="assets/image/socials/inst.svg" alt="instagram"
               /></a>
             </li>
             <li class="social__link">
-              <a href="#"
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
                 ><img src="assets/image/socials/fb.svg" alt="facebook"
               /></a>
             </li>
             <li class="social__link">
-              <a href="#"
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 ><img src="assets/image/socials/tw.svg" alt="twitter"
               /></a>
             </li>
             <li class="social__link">
-              <a href="#"
+              <a
+                href="https://www.pinterest.com/"
+                target="_blank"
+                rel="noopener noreferrer"
                 ><img src="assets/image/socials/pinterest.svg" alt="pinterest"
               /></a>
             </li>
@@ -321,5 +370,6 @@
 
     <script src="js/index.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/smoothScroll.js"></script>
   </body>
 </html>
