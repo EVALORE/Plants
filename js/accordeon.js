@@ -1,19 +1,16 @@
 function accordeon() {
-  const item = document.querySelectorAll('.accordeon__option');
+  const item = document.querySelectorAll(".accordeon__option");
 
   item.forEach((event) => {
-    event.addEventListener('click', () => {
-      if (event.classList.contains('active')) {
-        event.classList.remove('active');
-      } else {
-        item.forEach((e) => {
-          e.classList.remove('active');
-        });
-        event.classList.add('active');
-      }
+    event.addEventListener("click", (e) => {
+      if (e.target.classList.contains("accordeon__more")) return;
+      event.classList.contains("active")
+        ? event.classList.toggle("active", false)
+        : item.forEach((e) => {
+            e.classList.toggle("active", false);
+            event.classList.toggle("active", true);
+          });
     });
   });
-
 }
-
-accordeon()
+accordeon();

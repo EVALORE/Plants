@@ -77,7 +77,12 @@
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s.
               </p>
-              <button class="welcome__button">Learn More</button>
+              <button
+                onclick="window.location.href = '#about-us';"
+                class="welcome__button"
+              >
+                Learn More
+              </button>
             </div>
           </div>
         </section>
@@ -106,13 +111,13 @@
             <div class="service__top">
               <h2 class="service__title title">Service and our projects</h2>
               <div class="service__buttons">
-                <button class="button">Gardens</button>
-                <button class="button">Lawn</button>
-                <button class="button">Planting</button>
+                <button class="button" data-filter="garden">Gardens</button>
+                <button class="button" data-filter="lawn">Lawn</button>
+                <button class="button" data-filter="plant">Planting</button>
               </div>
             </div>
             <div class="service__cards">
-              <div class="card">
+              <div class="card" data-content="garden">
                 <picture class="card__img">
                   <source
                     media="(min-width: 768px)"
@@ -128,7 +133,7 @@
                   </div>
                 </div>
               </div>
-              <div class="card">
+              <div class="card" data-content="plant">
                 <picture class="card__img">
                   <source
                     media="(min-width: 768px)"
@@ -144,7 +149,7 @@
                   </div>
                 </div>
               </div>
-              <div class="card">
+              <div class="card" data-content="lawn">
                 <picture class="card__img">
                   <source
                     media="(min-width: 768px)"
@@ -160,7 +165,7 @@
                   </div>
                 </div>
               </div>
-              <div class="card">
+              <div class="card" data-content="plant">
                 <picture class="card__img">
                   <source
                     media="(min-width: 768px)"
@@ -176,7 +181,7 @@
                   </div>
                 </div>
               </div>
-              <div class="card">
+              <div class="card" data-content="garden">
                 <picture class="card__img">
                   <source
                     media="(min-width: 768px)"
@@ -192,7 +197,7 @@
                   </div>
                 </div>
               </div>
-              <div class="card">
+              <div class="card" data-content="plant">
                 <picture class="card__img">
                   <source
                     media="(min-width: 768px)"
@@ -220,7 +225,7 @@
                   <div class="accordeon__top">
                     <p class="accordeon__title">Basics</p>
                     <div class="accordeon__button">
-                      <svg width="6" height="4">
+                      <svg width="6" height="6">
                         <use xlink:href="./assets/image/sprite.svg#arrow"></use>
                       </svg>
                     </div>
@@ -231,13 +236,18 @@
                     and more recently
                   </p>
                   <p class="accordeon__price"><span>$15</span> / per hour</p>
-                  <div class="accordeon__more">Order</div>
+                  <div
+                    onclick="window.location.href = '#service';"
+                    class="accordeon__more"
+                  >
+                    Order
+                  </div>
                 </div>
                 <div class="accordeon__option">
                   <div class="accordeon__top">
                     <p class="accordeon__title">Standard</p>
                     <div class="accordeon__button">
-                      <svg width="6" height="4">
+                      <svg width="6" height="6">
                         <use xlink:href="./assets/image/sprite.svg#arrow"></use>
                       </svg>
                     </div>
@@ -248,13 +258,18 @@
                     and more recently
                   </p>
                   <p class="accordeon__price"><span>$25</span> / per hour</p>
-                  <div class="accordeon__more">Order</div>
+                  <div
+                    onclick="window.location.href = '#service';"
+                    class="accordeon__more"
+                  >
+                    Order
+                  </div>
                 </div>
                 <div class="accordeon__option">
                   <div class="accordeon__top">
                     <p class="accordeon__title">Pro care</p>
                     <div class="accordeon__button">
-                      <svg width="6" height="4">
+                      <svg width="6" height="6">
                         <use xlink:href="./assets/image/sprite.svg#arrow"></use>
                       </svg>
                     </div>
@@ -265,7 +280,12 @@
                     and more recently
                   </p>
                   <p class="accordeon__price"><span>$35</span> / per hour</p>
-                  <div class="accordeon__more">Order</div>
+                  <div
+                    onclick="window.location.href = '#service';"
+                    class="accordeon__more"
+                  >
+                    Order
+                  </div>
                 </div>
               </div>
             </div>
@@ -273,7 +293,12 @@
               <p class="prices__text title">
                 Our best <span>gardeners</span> are ready to help you
               </p>
-              <button class="prices__button">Contact us</button>
+              <button
+                onclick="window.location.href = '#contacts';"
+                class="prices__button"
+              >
+                Contact us
+              </button>
               <img
                 src="assets/image/prices/prices__leafs.png"
                 alt="leaves"
@@ -293,18 +318,22 @@
             <div class="contacts__content">
               <h2 class="contacts__title title">Contact us</h2>
               <div class="contacts__select">
-                <div class="dropdown">
-                  <div class="dropdown__select">
-                    <div class="dropdown__title">City</div>
-                    <div class="dropdown__button">
-                      <svg width="6" height="4">
-                        <use xlink:href="./assets/image/sprite.svg#arrow"></use>
-                      </svg>
+                <div class="contacts__inner">
+                  <div class="select">
+                    <div class="select__active">
+                      <div class="select__title">City</div>
+                      <div class="select__button">
+                        <svg width="6" height="6">
+                          <use
+                            xlink:href="./assets/image/sprite.svg#arrow"
+                          ></use>
+                        </svg>
+                      </div>
                     </div>
+                    <div class="select__list"></div>
                   </div>
-                  <div class="dropdown__list"></div>
+                  <div class="contact"></div>
                 </div>
-                <div class="city"></div>
               </div>
             </div>
           </div>
@@ -371,5 +400,8 @@
     <script src="js/index.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/smoothScroll.js"></script>
+    <script src="js/accordeon.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/select.js"></script>
   </body>
 </html>
